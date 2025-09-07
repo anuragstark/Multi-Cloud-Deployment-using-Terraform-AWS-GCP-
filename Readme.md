@@ -9,9 +9,9 @@ Deploy web servers on both AWS and GCP with a single command, then validate the 
 ## Prerequisites
 
 ### Required Tools
-- ✅ Terraform (installed)
-- ✅ AWS CLI (configured)
-- ✅ GCP Service Account Key (configured)
+- Terraform (installed)
+- AWS CLI (configured)
+- GCP Service Account Key (configured)
 - curl (for health checks)
 - jq (for JSON parsing)
 
@@ -99,14 +99,15 @@ After DNS setup, you can access servers using friendly names:
 
 ```
 multicloud-terraform/
-├── main.tf                 # Main Terraform configuration
-├── terraform.tfvars       # Variable values
-├── deploy.sh              # Auto deployment script
-├── health_check.sh        # Health monitoring script
-├── setup_dnsmasq.sh       # DNS configuration script
-├── terraform.tfstate      # Terraform state (auto-generated)
-├── deployer-key.pem       # SSH private key (auto-generated)
-└── deployment.log         # Deployment log (auto-generated)
+├── main.tf                  # Main Terraform configuration
+├── terraform.tfvars.example # Variable values
+├── deploy.sh                # Auto deployment script
+├── health_check.sh          # Health monitoring script
+├── dns_load_balancer.sh     # DNS for loadbalancer
+├── setup_dnsmasq.sh         # DNS configuration script
+├── .gitignore               # for ignore confidential files
+├── Readme.md                # Docs for this Project
+└── Output_Images            # Deployment log (auto-generated)
 ```
 
 ## Infrastructure Components
@@ -301,7 +302,7 @@ Both configurations use free tier resources:
 ## 🔧 Customization
 
 ### Modify Variables
-Edit `terraform.tfvars`:
+Edit `terraform.tfvars.example to terraform.tfvars`:
 ```hcl
 project_name = "my-multicloud-app"
 aws_region   = "us-west-2" 
