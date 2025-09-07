@@ -1,0 +1,116 @@
+
+# Terraform Files
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfplan
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate.backup
+crash.log
+crash.*.log
+tfplan
+.fuse_hidden000001da00000001
+# SSH Keys and Certificates
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+deployer-key*
+private_key*
+public_key*
+
+# Cloud Provider Credentials
+terraform-sa-keygcp.json
+*-sa-key*.json
+aws-credentials*
+gcp-credentials*
+service-account*.json
+*.credentials
+
+# Logs and Output Files
+*.log
+deployment.log
+terraform.log
+output.json
+*.out
+
+# Temporary Files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.sublime-*
+*.code-workspace
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# DNSMasq Configuration (if contains sensitive data)
+multicloud.conf
+dnsmasq.conf
+
+# Backup Files
+*.backup
+*.bak
+resolv.conf.backup
+hosts.backup
+
+# Node.js (if using any Node tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (if using any Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv/
+env/
+venv/
+
+# Local Environment Files
+.env
+.env.local
+.env.*.local
+
+# Archive Files
+*.zip
+*.tar.gz
+*.rar
+
+# Documentation Build Files
+docs/_build/
+site/
+
+# Coverage Reports
+coverage/
+*.cover
+.coverage
+
+# Security and Sensitive Data
+secrets.txt
+passwords.txt
+tokens.txt
+api-keys.txt
+
+# Custom Local Files
+local-config*
+test-data/
+temp-files/

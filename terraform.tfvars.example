@@ -1,0 +1,11 @@
+# File: terraform.tfvars
+# Copy this file and update with your actual values
+
+# Replace with your actual GCP project ID
+gcp_project_id = "your-gcp-project-id"
+
+# Optional: Customize these if needed
+project_name = "multicloud-demo"
+aws_region   = "us-east-1"
+gcp_region   = "us-central1"
+gcp_zone     = "us-central1-a"
